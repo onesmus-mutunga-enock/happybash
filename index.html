@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy birthday TRIZAAH</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    h1{
+
+color: #ff69b4;
+  
+   
+
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+   font-family: 'Courgette', cursive;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: white;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .letter {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .balloon {
+      position: absolute;
+      width: 80px;
+      height: 100px;
+      border-radius: 50% 50% 50% 50%;
+      /* box-shadow: inset 0 -10px 0 rgba(0, 0, 0, 0.2); */
+      animation: float 5s ease-in-out infinite, glow 1s ease-in-out infinite alternate;
+    }
+
+    .balloon:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      top: 20px;
+      left: 30px;
+    }
+
+    .balloon:after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      top: 40px;
+      left: 40px;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(10px);
+      }
+      50% {
+        transform: translateY(-40px);
+      }
+      100% {
+        transform: translateY(10px);
+      }
+    }
+
+    @keyframes glow {
+      0% {
+        background-color: #ff69b4;
+      }
+      50% {
+        background-color:transparent;
+      }
+      100% {
+        background-color: #ffff00;
+      }
+    }
+
+    .cake {
+      position: absolute;
+      width: 100px;
+      height: 80px;
+      background-color: #c2a2ad;
+      border-radius: 10px;
+      animation: cakeFloat 6s ease-in-out infinite;
+    }
+
+    .cake:before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 60px;
+      background-color: #e6c9d4;
+      border-radius: 10px;
+      top: 10px;
+      left: 10px;
+    }
+
+    .cake:after {
+      content: "🎂";
+      position: absolute;
+      font-size: 30px;
+      top: 20px;
+      left: 35px;
+    }
+
+    @keyframes cakeFloat {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        background-image: url('https://example.com/candle-background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+         font-family: 'pacifico', cursive;
+        color: rgb(182, 63, 146);
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .balloon {
+        position: absolute;
+        width: 60px;
+        height: 80px;
+      }
+
+      .balloon:before {
+        width: 15px;
+        height: 15px;
+        top: 15px;
+        left: 22.5px;
+      }
+
+      .balloon:after {
+        width: 8px;
+        height: 8px;
+        top: 30px;
+        left: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="letter">
+      <h1>HAPPY BIRTHDAY ENGINEER TRIZAAH</h1>
+
+      <p>On this special day, I am reminded of the profound beauty that radiates from your very being. You are the epitome of grace, elegance, and radiance - a vision that captivates me anew with each passing moment.</p>
+
+      <p>As we celebrate this birthday milestone together, let us embrace a different perspective, one that cherishes the profound connection we share. For as long as I exist, you will be the light that guides my path, the source of my unwavering affection.</p>
+
+      <p>May this day bring you immeasurable joy, for you deserve nothing less. My heart, my soul, my everything - I am honored to walk this journey by your side.</p>
+
+      <p>Happy birthday, my love. You are, and will always be, the algorithm that runs my life.</p>
+      
+      
+    </div>
+  </div>
+
+  <script>
+    // Create floating balloons
+    const container = document.querySelector('.container');
+    const numBalloons = 10;
+
+    for (let i = 0; i < numBalloons; i++) {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + '%';
+      balloon.style.top = Math.random() * 100 + '%';
+      balloon.style.animationDelay = Math.random() * 4 + 's';
+      container.appendChild(balloon);
+    }
+
+    // Create floating cakes
+    const numCakes = 3;
+
+    for (let i = 0; i < numCakes; i++) {
+      const cake = document.createElement('div');
+      cake.classList.add('cake');
+      cake.style.right = Math.random() * 100 + '%';
+      cake.style.animationDelay = Math.random() * 6 + 's';
+      document.body.appendChild(cake);
+    }
+  </script>
+</body>
+</html>
