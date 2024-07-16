@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      overflow: hidden;
+      background-color: rgb(191, 209, 209);
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-color: rgb(175, 18, 175);
+    }
+
+    .balloon {
+      position: absolute;
+      width: 100px;
+      height: 130px;
+      background-color: #ff69b4;
+      border-radius: 50% 50% 50% 50%;
+      animation: float 5s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .balloon:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 80px;
+      background-color: #8b4513;
+      bottom: -80px;
+      left: 40px;
+    }
+
+    .owner-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      background-image: url('pic1.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      animation: fadeInOut 10s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(200%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      5% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      55% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="balloon"></div>
+    <div class="balloon" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="balloon" style="left: 40%; animation-delay: 2s;"></div>
+    <div class="balloon" style="left: 60%; animation-delay: 3s;"></div>
+    <div class="balloon" style="left: 80%; animation-delay: 4s;"></div>
+    <div class="owner-image"></div>
+    <h3>HAPPY  BIRTHDAY  LOVE💖💗💗💖💖💖💖💖💖💖💖</h3>
+  </div>
+  
+</body>
+</html>
